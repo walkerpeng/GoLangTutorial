@@ -11,6 +11,6 @@ func main() {
 
 	go func() { messages <- "ping" }()
 
-	msg := <-messages
+	msg := <-messages //<-channel：从channel接收值
 	fmt.Println(msg)
 }
